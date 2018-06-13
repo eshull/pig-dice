@@ -1,70 +1,37 @@
 // BUSINESS LOGIC
-function Player(name){
+function Player(name) {
   this.name = name;
-  this.score = [];
+  this.runningScore = 0;
 }
 
-Player.prototype.roll(){
-  var roll = Math.floor((Math.random() * 6) +1);
-  console.log(roll);
-  return roll;
+Player.prototype.roll = function() {
+  var diceRoll = Math.floor((Math.random() * 6) +1);
+  return diceRoll;
 }
 
-Player.prototype.runningTotal = function(number){
-    var turnTotal = [];
-    turnTotal.push(number);
+Player.prototype.sendScore = function(singleRoll) {
+  this.runningScore = this.runningScore + singleRoll;
 }
-
-Player.prototype.confirmHold = function(){
-  var holdStatus = confirm("Do you want to hold?");
-  return holdStatus;
-}
-
-while (holdStatus === true)
-
-
-
-var Fred = new Player("Fred");
-
-
-// function rollDice(){
-//
-// } /* ROLL DICE */
-//
-// function turn(roll){
-//   var turnScore = roll;
-//   hold = false
-// while (hold === false) {
-//   if (roll === 1) {
-//     turnScore = 0;
-//     return turnScore;
-//   } else {
-//     turnScore = roll + turnScore;
-//   }
-//   var hold = confirm("do you want to continue?")
-//   if (true) {
-//     hold = return turnScore;
-//   } else if (false) {
-//     hold = false;
-//   }
-// }
-
-// Player.prototype.rollDice = function () {
-//   var roll = Math.floor((Math.random() * 6) +1);
-//   console.log(roll);
-//   return roll;
-
 
 
 
 
 // UI LOGIC
 $(function(){
+  var player1 = new Player("Kelli");
 
-  var diceValue = roll();
-  turnTotal(diceValue);
+  $(".btn").click(function(){
+    var roll = player1.roll();
+    console.log("roll:" + roll);
+
+    if(roll === 1){
+      player1.sendScore(0);
+    } else {
+    player1.sendScore(roll);
+  }
+  console.log("running score: " + player1.runningScore);
+  })
 
 
 
-
-}) /* PAGE LOAD */
+})

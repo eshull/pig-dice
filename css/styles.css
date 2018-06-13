@@ -1,0 +1,15 @@
+.player-area{
+  background-color: beige;
+  text-align: center;
+  border:dotted black 2px;
+  padding:15px;
+}
+
+.score{
+  text-align: left;
+  font-weight: bold;
+}
+
+.btn{
+  float:right;
+}

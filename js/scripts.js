@@ -15,7 +15,7 @@ Player.prototype.sendScore = function(singleRoll) {
 // pushing the die value and returning a true or false
 Player.prototype.singleTurn = function() {
   var roll = Math.floor((Math.random() * 6) +1);
-  console.log("current roll:" + roll);
+  console.log("function called");
   if(roll === 1) {
     this.sendScore(0);
     return false;
@@ -30,6 +30,13 @@ Player.prototype.singleTurn = function() {
     var holdStatus = confirm('Hold?');
     return holdStatus;
   }
+
+  function endTurn(div1, div2){
+    div1.hide();
+    div2.show();
+  }
+
+
 // function endTurn(){}
 // if (singleTurnVar === false) {
 //   hide current player area
@@ -45,19 +52,25 @@ Player.prototype.singleTurn = function() {
 // UI LOGIC
 $(function(){
   var player1 = new Player("Kelli");
+  var player2 = new Player("Eric");
+  var player1Div = $("#playerOneArea");
+  var player2Div = $("#playerTwoArea");
+  var startGameDiv = $(".startGame");
 
-  $(".btn").click(function(){
+  $("#play-button").click(function(){
+    event.preventDefault();
+    endTurn(startGameDiv, player1Div);
+  })
+
+  $("#player1-button").click(function(){
     var singleTurnVar = player1.singleTurn();
     if (singleTurnVar === false){
-      console.log("end turn");
       // endTurn();
     } else {
       var hold = player1.continuePopUp();
-      while (hold === true){
+      while (hold === true) {
         player1.singleTurn();
-        console.log("take turn again")
         hold = player1.continuePopUp();
-        console.log("after while loop 1 " + hold);
       }
     }
     // var confirm()

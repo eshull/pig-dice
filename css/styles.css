@@ -13,3 +13,28 @@
 .btn{
   float:right;
 }
+
+#playerOneArea {
+  display: none;
+}
+
+#playerTwoArea {
+  display: none
+}
+
+.btn-lg {
+  margin-top: 50px;
+  font-size: 196px;
+}
+
+.startGame {
+  height: 400px;
+  text-align: center;
+}
+#play-button{
+  float: none;
+}
+
+.row {
+  margin-top: 110px;
+}

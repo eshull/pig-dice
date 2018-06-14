@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="startGame">
+      <div id="startGame">
         <form id="theForm">
           <h2>Enter Player Name</h2>
           <div class="form-group">
@@ -29,23 +29,26 @@
         </form>
       </div>
       <div class="row">
-        <h1>Pig Dice</h1>
         <div id="playerOneArea" class="col-md-6 player-area">
-          PLAYER ONE
-          <div class="score">
-            Score:
-            <button type="button" class="btn btn-success" id="player1-button">Roll</button>
-          </div>
+          <h1><span id="player1-name"></span>, it's your turn!</h1>
+            <button type="button" class="btn btn-success" id="player1-roll-button">Roll</button>
+            <button type="button" class="btn btn-success" id="player1-hold-button">Hold</button>
+            <p>Your Roll: <span id="p1-current-roll-area"></span></p>
+            <p>Total Turn Score: <span id="p1-running-score-area"></span></p>
+            <p>Your Total Score: <span id="p1-total-score-area"></span></p>
+            <p>Opponent's Total Score: <span id="p1-opponent-score-area"></span></p>
         </div>
         <div id="playerTwoArea" class="col-md-6 player-area">
-          PLAYER TWO
-          <div class="score">
-            Score:
-            <button type="button" class="btn btn-success" id="player2-button">Roll</button>
-          </div>
+          <h1><span id="player2-name"></span>, it's your turn!</h1>
+            <button type="button" class="btn btn-success" id="player2-roll-button">Roll</button>
+            <button type="button" class="btn btn-success" id="player2-hold-button">Hold</button>
+            <p>Your Roll: <span id="p2-current-roll-area"></span></p>
+            <p>Total Turn Score: <span id="p2-running-score-area"></span></p>
+            <p>Your Total Score: <span id="p2-total-score-area"></span></p>
+            <p>Opponent's Total Score: <span id="p2-opponent-score-area"></span></p>
+        </div>
         </div>
     </div>
-
 
     </div>
   </body>

@@ -10,16 +10,12 @@
   font-weight: bold;
 }
 
-.btn{
+/*.btn{
   float:right;
-}
+}*/
 
-#playerOneArea {
-  display: none;
-}
-
-#playerTwoArea {
-  display: none
+.player-area{
+  display:none;
 }
 
 .btn-lg {

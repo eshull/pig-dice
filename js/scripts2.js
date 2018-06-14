@@ -80,3 +80,44 @@ $(function(){
 
 
 }) /* PAGE LOAD */
+
+// pushing the die value and returning a true or false
+// Player.prototype.singleTurn = function(roll) {
+//     console.log("function called");
+//     this.currentRoll(roll);
+//     if(roll === 1) {
+//       this.sendScore(0);
+//       return false;
+//     } else {
+//       this.sendScore(roll);
+//       return true;
+//     }
+//   }
+
+  // Player.prototype.currentRoll = function(instance){
+  //   console.log("roll inside currentroll function" + instance);
+  //   this.dieroll = instance;
+  //
+  // }
+  //
+  // Player.prototype.continuePopUp = function(){
+  //   var holdStatus = confirm('Hold?');
+  //   return holdStatus;
+  // }
+  //
+  // function endTurn(div1, div2){
+  //   div1.hide();
+  //   div2.show();
+  // }
+
+
+// function endTurn(){}
+// if (singleTurnVar === false) {
+//   hide current player area
+//   add current players final turn score to score div
+//
+// } else {
+//   var newRoll = currentPlayer.roll();
+//   confirm()
+//   singleTurn(roll);
+// }

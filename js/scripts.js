@@ -48,15 +48,15 @@ $(function(){
     console.log(player1.totalScore);
     // function
     // jquery grab runningscore
+    
+    $("#p1-running-score-area").text(player1.runningScore);
+    $("#p1-total-score-area").text(player1.totalScore);
     if(diceValue === 1){
       player1.runningScore = 0;
       var runningScore = player1.runningScore;
-      $("#p1-running-score-area").text(runningScore);
       player1.totalScore += player1.runningScore;
       console.log(player1.totalScore);
-      $("#p1-total-score-area").text(player1.totalScore);
       player1.runningScore = 0;
-      $("#p1-running-score-area").text(player1.runningScore);
       $("#playerOneArea").hide();
       $("#playerTwoArea").fadeIn();
       console.log(player1.totalScore);
